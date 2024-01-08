@@ -17,6 +17,8 @@ return new class extends Migration
             $table->date('publish_date')->nullable();
             $table->text('title');
             $table->text('body')->nullable();
+            $table->integer('content_id');
+            $table->text('content_type');
             $table->timestamps();
         });
     }
