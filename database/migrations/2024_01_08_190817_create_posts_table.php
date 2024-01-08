@@ -15,10 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->date('publish_date')->nullable();
-            $table->text('title');
+            $table->string('title');
             $table->text('body')->nullable();
-            $table->integer('content_id');
-            $table->text('content_type');
+            $table->morphs('postable');
             $table->timestamps();
         });
     }
