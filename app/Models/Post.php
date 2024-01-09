@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -13,7 +14,7 @@ class Post extends Model
         return $this->morphTo();
     }
 
-    public function author() {
-        return User::find($this->user_id);
+    public function author(): BelongsTo {
+        return $this->belongsTo(User::class);
     }
 }
