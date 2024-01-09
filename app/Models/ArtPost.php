@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ArtPost extends Model
 {
     use HasFactory;
+
+    public function post() {
+        return $this->morphOne(Post::class, 'postable');
+    }
 }
