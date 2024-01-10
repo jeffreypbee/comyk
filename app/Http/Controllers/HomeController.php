@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function __invoke()
     {
         return view('home', [
-            'posts' => Post::all()
+            'latestPosts' => Post::published()->latest('publish_date')->get()
         ]);
     }
 }
