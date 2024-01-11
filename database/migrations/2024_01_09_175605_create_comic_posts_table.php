@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comic_posts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('comic_series_id')->constrained('comic_series')->onDelete('cascade')->nullable();
+            $table->foreignId('comic_series_id')->nullable()->constrained('comic_series')->onDelete('cascade');
             $table->integer('page_number')->nullable();
             $table->timestamps();
         });

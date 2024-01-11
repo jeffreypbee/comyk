@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('comic_series', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->foreignId('parent_id')->constrained('comic_series')->onDelete('cascade')->nullable();
+            $table->foreignId('parent_id')->nullable()->constrained('comic_series')->onDelete('cascade');
             $table->text('description')->nullable();
             $table->timestamps();
         });
