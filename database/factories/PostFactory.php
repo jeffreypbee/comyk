@@ -22,6 +22,7 @@ class PostFactory extends Factory
             'publish_date' => fake()->date(),
             'title' => fake()->sentence(),
             'body' => fake()->paragraph(),
+            'image' => fake()->image(),
             'postable_id' => 0,
             'postable_type' => fake()->word()
         ];

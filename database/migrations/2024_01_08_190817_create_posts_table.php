@@ -17,6 +17,7 @@ return new class extends Migration
             $table->date('publish_date')->nullable();
             $table->string('title');
             $table->text('body')->nullable();
+            $table->string('image');
             $table->morphs('postable');
             $table->timestamps();
         });
