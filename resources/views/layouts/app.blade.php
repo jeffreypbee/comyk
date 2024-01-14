@@ -20,10 +20,8 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        @include('layouts.partials.header')
-
         <div class="min-h-screen bg-gray-100">
-            {{-- @livewire('navigation-menu') --}}
+            @livewire('navigation-menu')
 
             <!-- Page Content -->
             <main>

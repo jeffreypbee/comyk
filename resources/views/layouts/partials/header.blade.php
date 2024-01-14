@@ -1,3 +1,0 @@
-<header>
-    Comyk
-</header>
