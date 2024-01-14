@@ -7,10 +7,6 @@
     </div>
 
     <h3>Latest Posts</h3>
-    <div class="flex">
-        @foreach ($latestPosts as $post)
-        <x-site.post-card :post="$post" />
-        @endforeach
-    </div>
+    <x-site.post-card-container :posts="$latestPosts" />
 
 </x-app-layout>

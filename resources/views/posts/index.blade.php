@@ -1,9 +1,5 @@
 <x-app-layout>
 
-<div class="flex">
-    @foreach ($posts as $post)
-        <x-site.post-card :post="$post" />
-    @endforeach
-</div>
+<x-site.post-card-container :posts="$posts" />
 
 </x-app-layout>
