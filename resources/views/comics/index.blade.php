@@ -1,8 +1,14 @@
 <x-app-layout>
 
-    @foreach ($comicSeries as $series)
-        <div>{{$series->title}}</div>
-    @endforeach
+    <div class="flex">
+        @foreach ($comicSeries as $series)
+            <div>
+                <div>{{$series->title}}</div>
+                <img src="{{$series->image}}" />
+            </div>
+        @endforeach
+    </div>
+
 
     <x-site.post-card-container :posts="$comicPosts" />
 
