@@ -1,5 +1,6 @@
 <x-app-layout>
 
-    <x-site.post-card-container :posts="$artPosts" />
+    Art Gallery
+    <x-site.gallery :posts="$artPosts" />
 
 </x-app-layout>

@@ -1,5 +1,6 @@
 <x-app-layout>
 
+    Comic Series
     <div class="flex">
         @foreach ($comicSeries as $series)
             <div>
@@ -9,7 +10,7 @@
         @endforeach
     </div>
 
-
-    <x-site.post-card-container :posts="$comicPosts" />
+    Latest Comic Updates
+    <x-site.gallery :posts="$comicPosts" />
 
 </x-app-layout>
