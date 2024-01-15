@@ -19,6 +19,7 @@ class ComicSeriesFactory extends Factory
         return [
             'title' => fake()->sentence(),
             'description' => fake()->paragraph(),
+            'image' => fake()->imageUrl(),
             'parent_id' => null
         ];
     }

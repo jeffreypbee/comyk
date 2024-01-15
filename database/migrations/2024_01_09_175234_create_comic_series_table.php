@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('parent_id')->nullable()->constrained('comic_series')->onDelete('cascade');
             $table->text('description')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }
