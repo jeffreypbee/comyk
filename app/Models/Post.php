@@ -25,4 +25,15 @@ class Post extends Model
     public function scopePublished($query) {
         $query->where('publish_date', '<=', Carbon::now());
     }
+
+    public function getPostType() {
+        if ($this->postable_type === ArtPost::class) {
+            return 'Art';
+        } else if ($this->postable_type === ComicPost::class) {
+            return 'Comic';
+        } else if ($this->postable_type === BlogPost::class) {
+            return 'Blog';
+        }
+        return null;
+    }
 }
