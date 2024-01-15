@@ -15,7 +15,16 @@
                     <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('posts.index') }}" :active="request()->routeIs('posts.index')">
+                    <x-nav-link href="{{ route('blog') }}" :active="request()->routeIs('blog')">
+                        {{ __('Blog') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('art') }}" :active="request()->routeIs('art')">
+                        {{ __('Art') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('comics') }}" :active="request()->routeIs('comics')">
+                        {{ __('Comics') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('archive') }}" :active="request()->routeIs('archive')">
                         {{ __('Archive') }}
                     </x-nav-link>
                 </div>

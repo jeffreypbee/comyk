@@ -1,8 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArtPostController;
+use App\Http\Controllers\BlogPostController;
+use App\Http\Controllers\ComicPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/blog', [BlogPostController::class, 'index'])->name('blog');
+
+Route::get('/art', [ArtPostController::class, 'index'])->name('art');
+
+Route::get('/comics', [ComicPostController::class, 'index'])->name('comics');
+
+Route::get('/posts', [PostController::class, 'index'])->name('archive');
 
 Route::middleware([
     'auth:sanctum',
